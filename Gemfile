@@ -5,6 +5,9 @@ gem 'rails', '4.0.3'
 
 gem 'rails_12factor'
 
+# Use Devise for authentication
+gem 'devise'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
