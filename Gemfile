@@ -46,4 +46,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'thread_safe', '0.2.0'
+
 ruby '2.1.1'
