@@ -50,7 +50,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Heroku gem
-gem 'heroku'
+# gem 'heroku'
 
 gem 'thread_safe', '0.2.0'
 
