@@ -49,6 +49,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Heroku gem
+gem 'heroku'
+
 gem 'thread_safe', '0.2.0'
 
 ruby '2.1.1'
