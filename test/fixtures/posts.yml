@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  timestamp: 2014-03-20 21:03:38
+  likes: 1
+  title: MyString
+  event_date: 2014-03-20
+  body_text: MyText
+  media: MyString
+
+two:
+  email: MyString
+  timestamp: 2014-03-20 21:03:38
+  likes: 1
+  title: MyString
+  event_date: 2014-03-20
+  body_text: MyText
+  media: MyString

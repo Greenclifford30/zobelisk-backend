@@ -1,4 +1,16 @@
 ZobeliskBackend::Application.routes.draw do
+  resources :favorites
+
+  resources :zones
+
+  resources :beacons
+
+  resources :tags
+
+  resources :comments
+
+  resources :posts
+
 #resources :users  
 devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

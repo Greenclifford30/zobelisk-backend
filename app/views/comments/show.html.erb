@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @comment.email %>
+</p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @comment.timestamp %>
+</p>
+
+<p>
+  <strong>Text body:</strong>
+  <%= @comment.text_body %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
