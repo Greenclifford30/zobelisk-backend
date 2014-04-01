@@ -1,0 +1,15 @@
+Controllers and Models to modify:
+
+Seth:
+
+comments
+beacons
+zones
+
+Chris:
+
+tags
+favorites
+posts
+
+
