@@ -37,6 +37,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Use acts-as-taggable-on for tagging
+gem 'acts-as-taggable-on'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
