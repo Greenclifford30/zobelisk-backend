@@ -5,8 +5,6 @@ ZobeliskBackend::Application.routes.draw do
 
   resources :beacons
 
-  resources :tags
-
   resources :comments
 
   resources :posts
