@@ -20,6 +20,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.email %></td>
+        <td><%= post.user_id %></td>
         <td><%= post.timestamp %></td>
         <td><%= post.likes %></td>
         <td><%= post.title %></td>
