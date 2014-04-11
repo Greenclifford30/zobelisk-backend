@@ -8,7 +8,9 @@ class Post < ActiveRecord::Base
 
 	has_many :users, through: :favorites
 
-	has_many :comments, dependent: :destroy
+	has_many :comments, dependent: :destroy	
+
+	acts_as_taggable
 
 	acts_as_taggable_on :tags
 

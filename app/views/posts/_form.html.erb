@@ -40,8 +40,10 @@
     <%= f.text_field :media %>
   </div>
   
-  <%= f.label :tags %><br>
-  <%= f.text_field :tag_list %>
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
   
   <div class="actions">
     <%= f.submit %>
