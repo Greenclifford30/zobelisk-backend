@@ -34,6 +34,7 @@
   <strong>Media:</strong>
   <%= @post.media %>
 </p>
+
 <% @post.tags.any? %>
   <% @post.tags.each do |tag| %>
   <%= link_to tag.name, tagged_url(:tag => tag.name) %>

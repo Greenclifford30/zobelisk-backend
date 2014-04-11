@@ -17,7 +17,7 @@ ZobeliskBackend::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  match 'tagged' => 'posts#tagged', :as => 'tagged'
+  match 'tagged' => 'posts#tagged', :as => 'tagged', via: [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
