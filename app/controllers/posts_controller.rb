@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params[:beacon].present? 
+      @posts = Post.find_by beacon_id: params[:beacon]
+    else 
+      @posts = Post.all
+    end  
   end
 
   # GET /posts/1
