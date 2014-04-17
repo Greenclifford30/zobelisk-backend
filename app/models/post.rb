@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
 	belongs_to :beacon
 
-	has_many :favorites, dependent: :destroy
+	has_many :favorites, :as => :favorable
 
 	has_many :users, through: :favorites
 
