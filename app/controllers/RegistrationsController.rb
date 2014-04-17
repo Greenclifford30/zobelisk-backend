@@ -1,5 +1,5 @@
-class RegistrationsController < Devise::RegistrationsController
-    
+class RegistrationsController < Devise::RegistrationsController 
+    prepend_before_filer :require_no_authentication
     def create
 
         @user = User.new(user_params)
