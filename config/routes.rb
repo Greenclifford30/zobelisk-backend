@@ -11,6 +11,17 @@ ZobeliskBackend::Application.routes.draw do
 
   #resources :users  
   devise_for :users, :controllers => {:registrations => "registrations"}
+  
+  devise_for :users, :controllers => {:sessions => "api/v1/sessions" }
+  devise_scope :user do
+      namespace :api do
+          namespace :v1 do
+              resources :sessions, :only => [:create, :destroy]
+          end
+      end
+  end
+
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
