@@ -1,6 +1,7 @@
 class FavoritesController < ApplicationController
   before_action :set_favorite, only: [:show, :edit, :update, :destroy]
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
+  before_save :associate_user
 
   # GET /favorites
   # GET /favorites.json
@@ -71,5 +72,12 @@ class FavoritesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def favorite_params
       params[:favorite]
+    end
+
+    def associate_user
+      unless self.user_id
+        return self.user_id = session[:user_id] if session[:user_id]
+        return false
+      end
     end
 end
