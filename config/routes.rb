@@ -10,7 +10,7 @@ ZobeliskBackend::Application.routes.draw do
   resources :posts
 
   #resources :users  
-  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "api/v1/sessions"}
+  devise_for :users, :controllers => {:registrations => "registrations"}#, :sessions => "api/v1/sessions"}
   #devise_scope :user do
    #   namespace :api do
     #      namespace :v1 do
@@ -19,7 +19,7 @@ ZobeliskBackend::Application.routes.draw do
      # end
   #end
 
-  resources :users
+  #resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
