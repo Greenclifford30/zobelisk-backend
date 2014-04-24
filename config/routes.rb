@@ -10,9 +10,7 @@ ZobeliskBackend::Application.routes.draw do
   resources :posts
 
   #resources :users  
-  devise_for :users, :controllers => {:registrations => "registrations"}
-  
-  devise_for :users, :controllers => {:sessions => "api/v1/sessions" }
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "api/v1/sessions"}
   devise_scope :user do
       namespace :api do
           namespace :v1 do
