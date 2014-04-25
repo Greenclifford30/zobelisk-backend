@@ -24,5 +24,8 @@ module ZobeliskBackend
     # Devise
     config.assets.initialize_on_precompile = false
 
+    #fix deprecation message
+    config.i18n.enforce_available_locales = true
+
   end
 end
