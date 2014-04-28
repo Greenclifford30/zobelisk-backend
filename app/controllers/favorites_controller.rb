@@ -16,6 +16,8 @@ class FavoritesController < ApplicationController
   # GET /favorites/new
   def new
     @favorite = Favorite.new
+    @favorite.user_id = current_user.id
+    @favorite.favorable_type = "post" #hardcoding this in, since we will only allow favoring posts
   end
 
   # GET /favorites/1/edit
@@ -70,6 +72,6 @@ class FavoritesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def favorite_params
-      params[:favorite]
+      params.require(:favorite).permit(:favorable_id, :favorable_type, :user_id, :id, :created_at, :updated_at)
     end
 end

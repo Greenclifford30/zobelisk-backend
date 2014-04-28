@@ -3,6 +3,12 @@
 <table>
   <thead>
     <tr>
+      <th>Favorite ID</th>
+      <th>Favorable ID</th>
+      <th>Favorable Type</th>
+      <th>User ID</th>
+      <th>Created At</th>
+      <th>Updated At</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +18,12 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
+        <td><%= favorite.id %></td>
+        <td><%= favorite.favorable_id %></td>
+        <td><%= favorite.favorable_type %></td>
+        <td><%= favorite.user_id %></td>
+        <td><%= favorite.created_at %></td>
+        <td><%= favorite.updated_at %></td>
         <td><%= link_to 'Show', favorite %></td>
         <td><%= link_to 'Edit', edit_favorite_path(favorite) %></td>
         <td><%= link_to 'Destroy', favorite, method: :delete, data: { confirm: 'Are you sure?' } %></td>

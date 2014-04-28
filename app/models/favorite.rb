@@ -2,9 +2,9 @@ class Favorite < ActiveRecord::Base
   belongs_to :favorable
   belongs_to :user
   validates_presence_of :user_id, :favorable_id, :favorable_type
-  before_save :associate_user
+  ### before_save :associate_user
 
-
+=begin
   #Protected Methods
   protected
 	def associate_user
@@ -13,4 +13,5 @@ class Favorite < ActiveRecord::Base
 	    return false
 	  end
 	end
+=end
 end
