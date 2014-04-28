@@ -75,7 +75,19 @@ class PostsController < ApplicationController
       @posts = Post.all
     end  
   end
+=begin
+  def favorited
 
+    p = Post.find(params[:post])
+    u = current_user
+    f = p.favorites.build
+    f.user_id = u.id
+    f.save
+
+    @posts = Post.all
+
+  end
+=end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
