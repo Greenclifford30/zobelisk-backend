@@ -5,6 +5,10 @@ class Favorite < ActiveRecord::Base
   ### before_save :associate_user
 
 =begin
+
+### This code should be redundant with the now working favorites
+### However I am leaving it for posterity in case it ends up being useful
+
   #Protected Methods
   protected
 	def associate_user
