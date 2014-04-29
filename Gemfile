@@ -50,7 +50,7 @@ gem 'acts-as-taggable-on'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 # Heroku gem
 # gem 'heroku'
