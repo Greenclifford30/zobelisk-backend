@@ -28,6 +28,8 @@ ZobeliskBackend::Application.routes.draw do
 
   match 'tagged' => 'posts#tagged', :as => 'tagged', via: [:get, :post]
 
+  match 'favorited' => 'posts#favorited', :as => 'favorited', via: [:get, :post]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
