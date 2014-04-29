@@ -40,6 +40,12 @@ end
 # Use acts-as-taggable-on for tagging
 gem 'acts-as-taggable-on'
 
+# Paperclip for image uploads
+gem 'paperclip'
+
+# Amazon web services gem
+gem 'aws-sdk'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
