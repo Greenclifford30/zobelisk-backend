@@ -75,6 +75,20 @@ class PostsController < ApplicationController
     end  
   end
 
+  def favorited
+    if !params[:user_id].present? 
+      params[:user_id] = current_user.id
+    end  
+    #@posts = Post.tagged_with(params[:tag])
+    # maybe try @posts = Post.favorited_by(params[:user_id])
+    @posts = Array.new()
+    u = User.find(params[:user_id])
+    f = u.favorites
+    f.each do |favorite|
+      @posts << Post.find(favorite.favorable_id)
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
