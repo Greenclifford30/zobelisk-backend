@@ -40,6 +40,11 @@
   <div><%= f.label :picture %> <i> (Path to image file on server) </i><br />
     <%= f.text_field :picture %></div>
 
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
   <div><%= f.submit "Update" %></div>
 <% end %>
 
