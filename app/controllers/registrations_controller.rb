@@ -6,9 +6,9 @@ class RegistrationsController < Devise::RegistrationsController
 
         @user = User.new(user_params)
         if @user.save
-            render :json => {:state => {:code => 0}, :data => @user }
+            render :json => { :state => { :code => 0 }, :data => @user }
         else
-            render :json => {:state => {:code => 1, :messages => @user.errors.full_messages} }
+            render :json => { :state => { :code => 1, :messages => @user.errors.full_messages } }
         end
     end
 
