@@ -22,6 +22,8 @@ ZobeliskBackend::Application.routes.draw do
 
   match 'favorited' => 'posts#favorited', :as => 'favorited', via: [:get, :post]
 
+  match 'get_user' => 'posts#get_user', :as => 'get_user', via: [:get]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

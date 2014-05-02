@@ -89,6 +89,15 @@ class PostsController < ApplicationController
     end
   end
 
+
+  #this doesn't belong here but it's a quick hack
+  def get_user
+    if !params[:user_id].present? 
+      params[:user_id] = current_user.id
+    end  
+    @user = User.find(params[:user_id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
