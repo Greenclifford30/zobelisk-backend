@@ -46,6 +46,9 @@ gem 'paperclip'
 # Amazon web services gem
 gem 'aws-sdk'
 
+# maybe this will fix the mage uploading?
+gem 'rmagick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
