@@ -96,6 +96,10 @@ class PostsController < ApplicationController
       params[:user_id] = current_user.id
     end  
     @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
+    end
   end
 
   private
