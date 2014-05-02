@@ -90,7 +90,7 @@ class PostsController < ApplicationController
   end
 
 
-  #this doesn't belong here but it's a quick hack
+  # this doesn't belong here but it's a quick hack
   def get_user
     if !params[:user_id].present? 
       params[:user_id] = current_user.id
