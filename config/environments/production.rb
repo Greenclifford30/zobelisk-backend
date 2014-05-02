@@ -87,4 +87,7 @@ ZobeliskBackend::Application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  # tell heroku to use rmagick
+  config.gem "rmagick", :lib => "RMagick" 
 end
