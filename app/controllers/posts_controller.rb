@@ -5,8 +5,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if params[:beacon].present? 
-      @posts = Post.where("beacon_id = ?", params[:beacon])
+    if params[:beacon_id].present? 
+      @posts = Post.where("beacon_id = ?", params[:beacon_id])
     else 
       @posts = Post.all
     end  
