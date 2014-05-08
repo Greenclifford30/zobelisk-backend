@@ -87,6 +87,10 @@ class PostsController < ApplicationController
     f.each do |favorite|
       @posts << Post.find(favorite.favorable_id)
     end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @posts }
+    end
   end
 
 
