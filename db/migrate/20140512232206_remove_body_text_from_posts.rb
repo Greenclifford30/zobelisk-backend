@@ -1,7 +1,7 @@
 class RemoveBodyTextFromPosts < ActiveRecord::Migration
   def change
   	change_table :posts do |p|
-      p.change :text_body, :string
+      p.change :body_text, :string
     end
   end
 end
