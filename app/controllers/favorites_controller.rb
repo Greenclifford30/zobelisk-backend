@@ -16,7 +16,7 @@ class FavoritesController < ApplicationController
   # GET /favorites/new
   def new
     @favorite = Favorite.new
-    @favorite.user_id = current_user.id
+    #@favorite.user_id = current_user.id
     @favorite.favorable_type = "post" #hardcoding this in, since we will only allow favoring posts
   end
 
@@ -28,7 +28,7 @@ class FavoritesController < ApplicationController
   # POST /favorites.json
   def create
     @favorite = Favorite.new(favorite_params)
-    @favorite.user_id = current_user.id
+    #@favorite.user_id = current_user.id
     respond_to do |format|
       if @favorite.save
         format.html { redirect_to @favorite, notice: 'Favorite was successfully created.' }
