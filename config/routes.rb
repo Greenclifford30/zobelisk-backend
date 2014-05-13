@@ -9,11 +9,6 @@ ZobeliskBackend::Application.routes.draw do
 
   resources :posts
 
-  namespace :api do
-    devise_for :users
-    resources :recipes, :only=>[:index, :show]
-  end  
-
   #resources :users  
 
     devise_for :users, :controllers => { :registrations => "registrations" }
