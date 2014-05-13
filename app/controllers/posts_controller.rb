@@ -101,10 +101,11 @@ class PostsController < ApplicationController
 
   # this doesn't belong here but it's a quick hack
   def get_user
-    if !params[:user_id].present? 
-      params[:user_id] = current_user.id
+    if !params[:email].present? 
+      @user = User.find_by_email(params[:email])
+      # params[:user_id] = current_user.id
     end  
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
