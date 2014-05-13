@@ -101,10 +101,8 @@ class PostsController < ApplicationController
 
   # this doesn't belong here but it's a quick hack
   def get_user
-    if !params[:email].present? 
       @user = User.find_by_email(params[:email])
-      # params[:user_id] = current_user.id
-    end  
+      # params[:user_id] = current_user.id 
     # @user = User.find(params[:user_id])
     respond_to do |format|
       format.html # show.html.erb
